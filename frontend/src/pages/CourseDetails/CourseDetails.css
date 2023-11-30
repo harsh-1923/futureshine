@@ -1,0 +1,62 @@
+.course-wrapper {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  padding: 20px;
+  min-height: 100vh;
+  /* background-color: rgb(212, 232, 238); */
+  background-color: var(--accent-blue);
+}
+
+.poster-img-wrapper {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  margin-top: 20px;
+  filter: drop-shadow(2px 2px 5px #908c8c69);
+}
+
+.course-title {
+  margin-top: 25px;
+  /* color: var(--dark-blue); */
+}
+
+.teacher-name {
+  color: var(--dark-blue);
+}
+
+.course-desc {
+  margin-top: 20px;
+}
+
+.info-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.box-wrapper {
+  border: 1px solid rgb(167, 158, 158);
+  /* color: var(--dark-blue); */
+  border-radius: 5px;
+  width: 100px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.register-btn {
+  margin-top: 20px;
+  height: 50px;
+  border-radius: 25px;
+  /* background-color: black; */
+  background-color: var(--dark-blue);
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+}

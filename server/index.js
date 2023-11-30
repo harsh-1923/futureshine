@@ -1,27 +1,32 @@
 const mongoose = require("mongoose");
 const express = require("express");
-const User = require("./models/User.js");
-
 const app = express();
-const PORT = 3000;
 
-const dburl =
-  "mongodb+srv://harshjusharma:URucEmxdiqtwcWI9@fscluster0.bv4zmm8.mongodb.net/?retryWrites=true&w=majority";
+const cookieParser = require("cookie-parser");
+
+app.use(cookieParser());
+app.use(express.json());
+
+const PORT = 8080;
+
+const dburl = require("./config.js").url;
 
 mongoose.connect(dburl).then(() => {
   console.log("Connected bro");
 });
 
+const userRouter = require("./routes/UserRouter");
+app.use("/api/user", userRouter);
+
+const courseRouter = require("./routes/CourseRouter");
+app.use("/api/course", courseRouter);
+
+const topicRouter = require("./routes/TopicRouter");
+app.use("/api/topic", topicRouter);
+
+const subTopicRouter = require("./routes/SubTopicRouter");
+app.use("/api/subtopic", subTopicRouter);
+
 app.listen(PORT, () => {
   console.log(`Listening tp ${PORT}`);
-});
-
-app.post("/insert", (req, res) => {
-  console.log("here");
-  var userModel = new User(req.params.user);
-  userModel.name = "s";
-  userModel.save().then((err, data) => {
-    if (err) console.log(err);
-    res.status(200).send({ msg: "done" });
-  });
 });

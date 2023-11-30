@@ -1,0 +1,23 @@
+.curriculum-wrapper {
+  /* padding: 20px; */
+  margin-top: 40px;
+  /* border: 1px solid red; */
+}
+
+.curriculum-title {
+  margin-bottom: 20px;
+}
+
+.subtopic-wrapper {
+  padding: 0px 20px;
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.subtopic-name {
+  margin-bottom: 15px;
+}
